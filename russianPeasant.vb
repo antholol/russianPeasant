@@ -2,7 +2,7 @@ Imports System
 
 Module russianPeasant
     Sub Main(args As String())
-        russianPeasant(67, 69)
+        Console.WriteLine(russianPeasant(69, 67))
     End Sub
     Function isOdd(ByVal number As Integer) As Boolean
         Try
@@ -20,12 +20,18 @@ Module russianPeasant
         Dim sum, temp As Integer
         sum = 0
         temp = 0
-        If num1multiply < num2toMultiply Then
+        If num1multiply > num2toMultiply Then
             temp = num1multiply
             num1multiply = num2toMultiply
             num2toMultiply = temp
         End If
-
-        Return -1
+        Do
+            If isOdd(num1multiply) Then
+                sum = sum + num2toMultiply
+                num2toMultiply = num2toMultiply * 2
+            End If
+            num1multiply = num1multiply \ 2
+        Loop Until num1multiply <= 1
+        Return sum
     End Function
 End Module
