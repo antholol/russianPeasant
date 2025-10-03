@@ -3,6 +3,12 @@ Imports System
 Module russianPeasant
     Sub Main(args As String())
         Console.WriteLine(russianPeasant(69, 67))
+        'six sevennnn
+        For x = 1 To 12
+            For y = 1 To 12
+                Console.WriteLine(russianPeasant(x, y))
+            Next
+        Next
     End Sub
     Function isOdd(ByVal number As Integer) As Boolean
         Try
