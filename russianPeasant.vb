@@ -28,10 +28,10 @@ Module russianPeasant
         Do
             If isOdd(num1multiply) Then
                 sum = sum + num2toMultiply
-                num2toMultiply = num2toMultiply * 2
             End If
             num1multiply = num1multiply \ 2
-        Loop Until num1multiply <= 1
+            num2toMultiply = num2toMultiply * 2
+        Loop Until num1multiply < 1
         Return sum
     End Function
 End Module
